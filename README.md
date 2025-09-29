@@ -12,3 +12,6 @@ Toktobekov Bektur
 - Faculty and courses pages  
 - Calendar and schedule  
 - Admin panel for content management 
+
+## Authentication system
+- lorem ipsum
