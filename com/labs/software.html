@@ -13,6 +13,36 @@
     <link rel="stylesheet" type="text/css" href="../css/960.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
 
+    <style>
+        .pagination {
+            text-align: center;
+            margin-top: 15px;
+        }
+    
+        .pagination button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            margin: 0 3px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+    
+        .pagination button:hover {
+            background-color: #005fa3;
+        }
+    
+        .pagination button.active {
+            background-color: #042a46;
+        }
+    
+        table tr.hidden {
+            display: none;
+        }
+    </style>
+    
 </head>
 
 <body>
@@ -164,6 +194,9 @@
                                     </tr>
 
                                 </table>
+
+                                <!-- Pagination Controls -->
+                                <div id="pagination" class="pagination"></div>
                             </div>
                         </li>
 
@@ -215,6 +248,48 @@
 		  ga('create', 'UA-46202546-1', 'iaau.edu.kg');
 		  ga('send', 'pageview');
 	</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const rowsPerPage = 5; // Number of rows per page
+        const table = document.querySelector('#st-accordion table');
+        const rows = table.querySelectorAll('tr:not(.elements)'); // exclude header row
+        const pagination = document.getElementById('pagination');
+
+        let currentPage = 1;
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        function showPage(page) {
+            const start = (page - 1) * rowsPerPage;
+            const end = start + rowsPerPage;
+
+            rows.forEach((row, index) => {
+                row.classList.toggle('hidden', !(index >= start && index < end));
+            });
+
+            // update active button
+            Array.from(pagination.children).forEach((btn, i) => {
+                btn.classList.toggle('active', i + 1 === page);
+            });
+        }
+
+        function setupPagination() {
+            pagination.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.addEventListener('click', () => {
+                    currentPage = i;
+                    showPage(currentPage);
+                });
+                pagination.appendChild(button);
+            }
+        }
+
+        setupPagination();
+        showPage(currentPage);
+    });
+</script>
 
 </body>
 
