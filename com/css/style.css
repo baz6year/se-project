@@ -460,9 +460,10 @@ table td{
     font-size: 20px;
 }
 .elements {
+	background: rgb(200, 200, 255);
     font-size: 13px;
-    font-color: #A0A0A0;
 }
+
 #c-text     {
     font-size: 25px;
     text-align: center;
