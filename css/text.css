@@ -1,5 +1,5 @@
 body {
-	font: 10px/1.5 'Droid Sans', Arial, 'Liberation Sans', FreeSans, sans-serif;
+	font: 10px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	color: #000;
 }
 
