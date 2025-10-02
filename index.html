@@ -41,7 +41,7 @@
 
 </head>
 
-
+<a href="#" id="back-to-top" aria-label="Back to top">↑</a>
 
 <body>
 
@@ -385,16 +385,33 @@
 
 		
 
-	<script type="text/javascript"> 
+	<script>
+    $(window).on('load', function () {
+      $("#slider").nivoSlider({
+      pauseOnHover: true,
+      animSpeed: 400,
+      pauseTime: 3500,
+      directionNav: true,
+      controlNav: true
+       });
+    });
 
-	
+  
+  $(function () {
+    var $btn = $('#back-to-top');
 
-		$(window).load(function() {
+    
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > 300) $btn.fadeIn(150);
+      else $btn.fadeOut(150);
+    });
 
-		    $("#slider").nivoSlider();
-
-		});
-
+    
+     $btn.on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 450); 
+     });
+    });
 
 
 	</script>
