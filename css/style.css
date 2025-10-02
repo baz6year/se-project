@@ -195,4 +195,11 @@ body {
   text-decoration: underline; 
 }
 
+/* Keep header visible while scrolling */
+#header-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 999; /* поверх контента */
+}
+
 
