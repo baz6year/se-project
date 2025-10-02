@@ -82,8 +82,17 @@ changed by Myktybek font-words
 }
 #in_tab2{
 	
-	color: blue;
+	color: purple;
 	
 	font-size:11px;
 
+}
+a {
+  text-decoration: none;
+  color: #126493; 
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0a5275; 
 }
