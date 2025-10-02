@@ -173,13 +173,21 @@ nav {
         }
 
 :root {
-  --brand: #38558e;   /* основной синий */
-  --accent: #33b5e5;  /* акцент/hover */
-  --text: #333;       /* основной текст */
+  --brand: #38558e;   
+  --accent: #33b5e5;  
+  --text: #333;       
 }
 
 /* Apply text color variable to body */
 body { 
   color: var(--text); 
 }
+
+/* Use accent color for navigation hover and active states */
+#nav ul li:hover > a,
+#nav ul li.sfhover > a,
+#nav ul li.current > a { 
+  color: var(--accent); 
+}
+
 
