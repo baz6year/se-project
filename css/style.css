@@ -199,7 +199,23 @@ body {
 #header-wrap {
   position: sticky;
   top: 0;
-  z-index: 999; /* поверх контента */
+  z-index: 999; 
 }
 
+/* Back-to-top button */
+#back-to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #38558e;
+  color: #fff;
+  text-decoration: none;
+  opacity: .75;
+  display: none;
+  z-index: 1000;      
+  cursor: pointer;     
+}
+#back-to-top:hover { opacity: 1; }
 
