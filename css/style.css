@@ -178,3 +178,8 @@ nav {
   --text: #333;       /* основной текст */
 }
 
+/* Apply text color variable to body */
+body { 
+  color: var(--text); 
+}
+
