@@ -4,7 +4,7 @@
 - Aliman Bazarbekova
 - Aiana Kutmanova
 - Turdubekova Elzada
-- Toktobekov Bektur - FullStack
+- Toktobekov Bektur 
 
 ## Features
 - Homepage with news section  
