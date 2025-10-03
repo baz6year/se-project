@@ -231,4 +231,10 @@ body {
 }
 .btn-primary:hover { background: #2f4775; }
 
+/* Subtle hover on logo link */
+#logo a { display: inline-block; transition: opacity .2s ease; }
+#logo a:hover { opacity: .85; }
+
+
+
 
